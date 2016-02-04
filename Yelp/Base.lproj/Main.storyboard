@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Yelpier-->
+        <!--Businesses View Controller-->
         <scene sceneID="5L9-Uz-lNK">
             <objects>
                 <viewController id="2xI-yr-O5N" customClass="BusinessesViewController" customModule="Yelp" customModuleProvider="target" sceneMemberID="viewController">
@@ -130,7 +130,7 @@
                             <constraint firstItem="oqq-Or-NAU" firstAttribute="top" secondItem="XhR-oz-92f" secondAttribute="top" id="bl7-Eh-e84"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Yelpier" id="Idb-1S-obK"/>
+                    <navigationItem key="navigationItem" id="Idb-1S-obK"/>
                     <connections>
                         <outlet property="searchBar" destination="0tn-xT-Kh0" id="R4B-E3-Ke5"/>
                         <outlet property="tableView" destination="oqq-Or-NAU" id="qiW-zu-hpO"/>
