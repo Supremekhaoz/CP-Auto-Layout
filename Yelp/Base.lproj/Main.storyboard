@@ -21,9 +21,14 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="114" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oqq-Or-NAU">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="0tn-xT-Kh0">
+                                    <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BusinessCell" rowHeight="114" id="M96-RI-9A2" customClass="BusinessCell" customModule="Yelp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="320" height="114"/>
+                                        <rect key="frame" x="0.0" y="136" width="320" height="114"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="M96-RI-9A2" id="Okd-rS-xkx">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="113"/>
@@ -127,6 +132,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Yelpier" id="Idb-1S-obK"/>
                     <connections>
+                        <outlet property="searchBar" destination="0tn-xT-Kh0" id="R4B-E3-Ke5"/>
                         <outlet property="tableView" destination="oqq-Or-NAU" id="qiW-zu-hpO"/>
                     </connections>
                 </viewController>
