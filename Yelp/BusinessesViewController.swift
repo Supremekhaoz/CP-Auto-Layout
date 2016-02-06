@@ -66,7 +66,7 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     // This method updates filteredData based on the text in the Search Box
-    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+    /*func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         // When there is no text, filteredData is the same as the original data
         if searchText.isEmpty {
             filteredData = businesses
@@ -85,7 +85,7 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
             })
         }
         tableView.reloadData()
-    }
+    }*/
     
     /*
     // MARK: - Navigation
