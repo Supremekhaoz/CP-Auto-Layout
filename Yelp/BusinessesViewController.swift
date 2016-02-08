@@ -76,10 +76,10 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
     
     func updateSearchResultsForSearchController(searchController: UISearchController) {
         if let searchText = searchController.searchBar.text {
-        filteredData = searchText.isEmpty ? businesses: self.businesses.filter({(dataString: Business) -> Bool in
-        let name = dataString.name! as String
+            filteredData = searchText.isEmpty ? businesses: self.businesses.filter({(dataString: Business) -> Bool in
+                let name = dataString.name! as String
         
-        return name.rangeOfString(searchText, options: .CaseInsensitiveSearch) != nil
+                return name.rangeOfString(searchText, options: .CaseInsensitiveSearch) != nil
         })
         
         tableView.reloadData()
@@ -100,10 +100,13 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
     func filtersViewController(filtersViewController: FiltersViewController, didUpdateFilters filters: [String : AnyObject]) {
         let categories = filters["categories"] as? [String]
         
+        MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        
         Business.searchWithTerm("Restaurants", sort: nil, categories: categories, deals: nil) {
             (businesses: [Business]!, error: NSError!) -> Void in
             self.businesses = businesses
             self.tableView.reloadData()
+            MBProgressHUD.hideHUDForView(self.view, animated: true)
         }
     }
 }
