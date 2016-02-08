@@ -36,12 +36,6 @@
                                                         <constraint firstAttribute="width" constant="83" id="XZa-db-4K0"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="1. Grand Pu Bah" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wBL-bk-E8m">
-                                                    <rect key="frame" x="81" y="8" width="109" height="17"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="88 Division St, Mission Bay" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVu-le-rC6">
                                                     <rect key="frame" x="81" y="49" width="218" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -66,12 +60,6 @@
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="0.05 mi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJv-Lq-fR7">
-                                                    <rect key="frame" x="273" y="8" width="39" height="14"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="doo-k7-WoE">
                                                     <rect key="frame" x="8" y="8" width="65" height="65"/>
                                                     <constraints>
@@ -79,6 +67,18 @@
                                                         <constraint firstAttribute="width" constant="65" id="s2G-ke-LsS"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="1. Grand Pu Bah" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wBL-bk-E8m">
+                                                    <rect key="frame" x="81" y="8" width="109" height="17"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="0.05 mi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJv-Lq-fR7">
+                                                    <rect key="frame" x="273" y="8" width="39" height="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="bVu-le-rC6" secondAttribute="trailing" constant="13" id="1FO-i6-PJw"/>
@@ -88,7 +88,6 @@
                                                 <constraint firstAttribute="trailing" secondItem="A4t-tA-1P6" secondAttribute="trailing" constant="8" id="9MM-R9-F0o"/>
                                                 <constraint firstItem="A4t-tA-1P6" firstAttribute="top" secondItem="iJv-Lq-fR7" secondAttribute="bottom" constant="7" id="BOE-d3-gDD"/>
                                                 <constraint firstItem="rcf-8k-Za7" firstAttribute="top" secondItem="wBL-bk-E8m" secondAttribute="bottom" constant="3" id="Dkf-Mr-aAP"/>
-                                                <constraint firstItem="iJv-Lq-fR7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wBL-bk-E8m" secondAttribute="trailing" constant="8" id="FYZ-uY-YdE"/>
                                                 <constraint firstItem="qkn-Pa-Cct" firstAttribute="leading" secondItem="rcf-8k-Za7" secondAttribute="trailing" constant="10" id="Kwr-Vl-eTR"/>
                                                 <constraint firstItem="doo-k7-WoE" firstAttribute="top" secondItem="Okd-rS-xkx" secondAttribute="top" constant="8" id="MAH-1L-Jro"/>
                                                 <constraint firstItem="rcf-8k-Za7" firstAttribute="leading" secondItem="doo-k7-WoE" secondAttribute="trailing" constant="8" id="To7-a8-n3T"/>
@@ -102,6 +101,7 @@
                                                 <constraint firstItem="X3z-78-fuM" firstAttribute="top" secondItem="bVu-le-rC6" secondAttribute="bottom" constant="3" id="uB9-QW-xgf"/>
                                                 <constraint firstItem="doo-k7-WoE" firstAttribute="leading" secondItem="Okd-rS-xkx" secondAttribute="leading" constant="8" id="wd3-Ug-Wi1"/>
                                                 <constraint firstAttribute="trailing" secondItem="iJv-Lq-fR7" secondAttribute="trailing" constant="8" id="zUD-Bt-v05"/>
+                                                <constraint firstItem="iJv-Lq-fR7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wBL-bk-E8m" secondAttribute="trailing" constant="8" id="zxC-RE-Ivf"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
