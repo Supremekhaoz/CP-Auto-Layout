@@ -36,7 +36,8 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
         self.resultSearchController.dimsBackgroundDuringPresentation = false
         self.resultSearchController.searchBar.sizeToFit()
         
-        tableView.tableHeaderView = resultSearchController.searchBar
+        navigationItem.titleView = resultSearchController.searchBar
+        resultSearchController.hidesNavigationBarDuringPresentation = false
         
         tableView.reloadData()
     }
