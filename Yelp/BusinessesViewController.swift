@@ -10,9 +10,9 @@ import UIKit
 
 class BusinessesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchResultsUpdating, FiltersViewControllerDelegate {
     @IBOutlet weak var tableView: UITableView!
-
+    
     var businesses: [Business]!
-    var filteredData: [Business]!
+    var filteredData:[Business]! = []
     var resultSearchController = UISearchController()
     
     override func viewDidLoad() {
@@ -37,7 +37,7 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
         self.resultSearchController.searchBar.sizeToFit()
         
         tableView.tableHeaderView = resultSearchController.searchBar
-
+        
         tableView.reloadData()
     }
     
@@ -45,11 +45,11 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if businesses != nil {
             if resultSearchController.active {
-                return self.filteredData!.count
+                return self.filteredData.count
             } else {
                 return self.businesses!.count
             }
@@ -72,20 +72,20 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func updateSearchResultsForSearchController(searchController: UISearchController) {
-        self.filteredData.removeAll(keepCapacity: false)
+        if let searchText = searchController.searchBar.text {
+        filteredData = searchText.isEmpty ? businesses: self.businesses.filter({(dataString: Business) -> Bool in
+        let name = dataString.name! as String
         
-        let searchPredicate = NSPredicate(format: "SELF CONTAINS[c] %@", searchController.searchBar.text!)
+        return name.rangeOfString(searchText, options: .CaseInsensitiveSearch) != nil
+        })
         
-        let array = (self.filteredData as [Business]).filteredArrayUsingPredicate(searchPredicate)
-        
-        self.filteredData = array
-        
-        self.tableView.reloadData()
+        tableView.reloadData()
+        }
     }
-        
+    
     
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let navigationController = segue.destinationViewController as! UINavigationController
@@ -93,7 +93,7 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
         
         filtersViewController.delegate = self
     }
-
+    
     func filtersViewController(filtersViewController: FiltersViewController, didUpdateFilters filters: [String : AnyObject]) {
         let categories = filters["categories"] as? [String]
         
