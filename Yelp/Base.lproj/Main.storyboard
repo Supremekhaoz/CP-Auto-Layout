@@ -101,7 +101,6 @@
                                                 <constraint firstItem="X3z-78-fuM" firstAttribute="top" secondItem="bVu-le-rC6" secondAttribute="bottom" constant="3" id="uB9-QW-xgf"/>
                                                 <constraint firstItem="doo-k7-WoE" firstAttribute="leading" secondItem="Okd-rS-xkx" secondAttribute="leading" constant="8" id="wd3-Ug-Wi1"/>
                                                 <constraint firstAttribute="trailing" secondItem="iJv-Lq-fR7" secondAttribute="trailing" constant="8" id="zUD-Bt-v05"/>
-                                                <constraint firstItem="iJv-Lq-fR7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wBL-bk-E8m" secondAttribute="trailing" constant="8" id="zxC-RE-Ivf"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

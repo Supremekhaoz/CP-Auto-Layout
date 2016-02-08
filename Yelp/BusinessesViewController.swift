@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class BusinessesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchResultsUpdating, FiltersViewControllerDelegate {
     @IBOutlet weak var tableView: UITableView!
@@ -17,17 +18,18 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         Business.searchWithTerm("Thai", completion: { (businesses: [Business]!, error: NSError!) -> Void in
             self.businesses = businesses
             self.tableView.reloadData()
+            MBProgressHUD.hideHUDForView(self.view, animated: true)
         })
         
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 120
-        
+
         self.filteredData = self.businesses
         
         self.resultSearchController = UISearchController(searchResultsController: nil)
@@ -61,7 +63,7 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("BusinessCell", forIndexPath: indexPath) as! BusinessCell
-        
+
         if resultSearchController.active {
             cell.business = self.filteredData[indexPath.row]
         } else {
